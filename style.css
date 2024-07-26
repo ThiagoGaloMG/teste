@@ -1,4 +1,4 @@
-/* Estilos para as caixas do contador */
+/* Estilo para o timer */
 .timer {
     font-size: 24px;
     font-weight: bold;
@@ -6,11 +6,12 @@
     padding: 10px;
     background-color: #f2f2f2;
     border: 2px solid #ddd;
-    border-radius: 5px;
-    margin: 5px;
+    border-radius: 8px;
+    margin: 5px 0;
+    color: #000; /* Cor do texto (ajuste conforme necessário) */
 }
 
 /* Estilo quando a contagem encerra */
 .timer:empty {
-    color: #ff0000; /* Vermelho */
+    color: #ff0000; /* Vermelho (ou outra cor de destaque) */
 }
