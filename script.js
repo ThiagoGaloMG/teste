@@ -1,7 +1,11 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function () {
-    const countdownDate = new Date('2030-01-05T15:37:25').getTime();
     const contadorElement = document.getElementById('contador');
+
+    // Defina a duração desejada em minutos (1 hora e 20 minutos = 80 minutos)
+    const duracaoMinutos = 80;
+    const duracaoMilissegundos = duracaoMinutos * 60 * 1000;
+
+    const countdownDate = new Date().getTime() + duracaoMilissegundos;
 
     function atualizarContador() {
         const agora = new Date().getTime();
