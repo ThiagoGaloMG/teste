@@ -1,7 +1,5 @@
 /* Estilos para as caixas do contador */
-#contador-horas,
-#contador-minutos,
-#contador-segundos {
+.timer {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
@@ -13,8 +11,6 @@
 }
 
 /* Estilo quando a contagem encerra */
-#contador-horas:empty,
-#contador-minutos:empty,
-#contador-segundos:empty {
+.timer:empty {
     color: #ff0000; /* Vermelho */
 }
