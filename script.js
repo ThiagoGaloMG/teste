@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const contadorElement = document.getElementById('contador');
+    const contadorElementHoras = document.getElementById('contador-horas');
+    const contadorElementMinutos = document.getElementById('contador-minutos');
+    const contadorElementSegundos = document.getElementById('contador-segundos');
 
     // Defina a duração desejada em minutos (1 hora e 20 minutos = 80 minutos)
     const duracaoMinutos = 80;
@@ -11,17 +13,23 @@ document.addEventListener('DOMContentLoaded', function () {
         const agora = new Date().getTime();
         const diferenca = countdownDate - agora;
 
-        const minutos = Math.floor(diferenca / (1000 * 60));
+        const horas = Math.floor(diferenca / (1000 * 60 * 60));
+        const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
         const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
 
+        const horasFormatadas = horas.toString().padStart(2, '0');
         const minutosFormatados = minutos.toString().padStart(2, '0');
         const segundosFormatados = segundos.toString().padStart(2, '0');
 
-        contadorElement.textContent = `${minutosFormatados}:${segundosFormatados}`;
+        contadorElementHoras.textContent = horasFormatadas;
+        contadorElementMinutos.textContent = minutosFormatados;
+        contadorElementSegundos.textContent = segundosFormatados;
 
         if (diferenca <= 0) {
             clearInterval(intervalo);
-            contadorElement.textContent = 'Contagem encerrada!';
+            contadorElementHoras.textContent = '00';
+            contadorElementMinutos.textContent = '00';
+            contadorElementSegundos.textContent = '00';
         }
     }
 
