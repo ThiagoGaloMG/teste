@@ -1,19 +1,22 @@
 /* styles.css */
-
-#countdown {
-    text-align: center;
+.base-timer {
+    position: relative;
+    height: 300px;
+    width: 300px;
 }
 
-#timer {
-    display: flex;
-    justify-content: center;
+.base-timer__circle {
+    fill: none;
+    stroke: none;
 }
 
-#timer div {
-    margin: 0 10px;
+.base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: grey;
 }
 
-#timer span {
-    display: block;
+#contador {
     font-size: 24px;
+    font-weight: bold;
+    text-align: center;
 }
