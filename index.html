@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador Regressivo</title>
+    <title>Countdown Timer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="base-timer">
-        <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <g class="base-timer__circle">
-                <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45" />
-            </g>
-        </svg>
-        <span id="contador">00:00</span>
+    <div class="timer">
+        <span id="contador-horas">00</span>:
+        <span id="contador-minutos">00</span>:
+        <span id="contador-segundos">00</span>
     </div>
     <script src="script.js"></script>
 </body>
