@@ -3,10 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const contadorElementMinutos = document.getElementById('contador-minutos');
     const contadorElementSegundos = document.getElementById('contador-segundos');
 
-    // Defina a duração desejada em minutos (1 hora e 20 minutos = 80 minutos)
-    const duracaoMinutos = 80;
+    const duracaoMinutos = 80; // Defina a duração desejada em minutos
     const duracaoMilissegundos = duracaoMinutos * 60 * 1000;
-
     const countdownDate = new Date().getTime() + duracaoMilissegundos;
 
     function atualizarContador() {
